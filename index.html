@@ -11,15 +11,16 @@
 <body>
     <div class="mainContainer">
         <form class="inputs">
-            <input type="number" class="display" id="digit1" style="display:block;">
-            <input type="number" class="display" id="digit2" style="display: none;">
+            <input type="text" class="display" id="digit1" style="display:block;">
+            <input type="text" class="display" id="digit2" style="display: none;">
         </form>
         <div class="buttonContainer">
             <div class="operands">
                 <button class="operandBtn" onclick="add();">+</button>
                 <button class="operandBtn" onclick="subtract();">-</button>
                 <button class="operandBtn" onclick="multiply();">X</button>
-                <button class="operandBtn" onclick="divide();">√</button>
+                <button class="operandBtn" onclick="divide();">/</button>
+                <button type="reset" id="clear" onclick="reset();">Clear</button>
             </div>
             <div class="numbers">
                 <button class="number" value="1" onclick="number(1);">1</button>
@@ -31,12 +32,11 @@
                 <button class="number" value="7" onclick="number(7);">7</button>
                 <button class="number" value="8" onclick="number(8);">8</button>
                 <button class="number" value="9" onclick="number(9);">9</button>
-                <button type="reset" id="clear" onclick="reset();">Clear</button>
+                <button class="number" value="9" onclick="period();">.</button>
                 <button class="number" value="0" onclick="number(0);">0</button>
                 <button type="submit" id="equals" onclick="equals();">=</button>
             </div>
         </div>
-        <div id="results"></div>
     </div>
 </body>
 </html>

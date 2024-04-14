@@ -47,31 +47,43 @@ function reset(){
 
 function equals(){
     if(operandType == "add"){    
-        results = parseInt(first.value) + parseInt(second.value);
+        results = parseFloat(first.value) + parseFloat(second.value);
         first.style.display = "block";
         second.style.display = "none";
         first.value = results;
         second.value = "";
     }
     else if(operandType == "subtract"){
-        results = parseInt(first.value) - parseInt(second.value);
+        results = parseFloat(first.value) - parseFloat(second.value);
         first.style.display = "block";
         second.style.display = "none";
         first.value = results;
         second.value = "";
     }
     else if(operandType == "multiply"){
-        results = parseInt(first.value) * parseInt(second.value);
+        results = parseFloat(first.value) * parseFloat(second.value);
         first.style.display = "block";
         second.style.display = "none";
         first.value = results;
         second.value = "";
     }
     else if(operandType == "divide"){
-        results = parseInt(first.value) / parseInt(second.value);
+        results = parseFloat(first.value) / parseFloat(second.value);
         first.style.display = "block";
         second.style.display = "none";
-        first.value = results;
+        first.value = results.toFixed(9);
         second.value = "";
+    }
+}
+
+function period(){
+    let period = ".";
+    if(first.style.display == "block"){
+        let displaying = first.value += period;
+        parseFloat(displaying);
+    }
+    else{
+        let displaying = second.value += period;
+        parseFloat(displaying);
     }
 }
