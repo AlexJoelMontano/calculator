@@ -1,37 +1,60 @@
 body{
-
+    display: flex;
+    justify-content: center;
+    background-color: #1f1f1f;
+}
+.title{
+    margin-top: 2%;
+    color: rgb(231, 234, 249);
+    box-shadow: 2px 2px solid;
+    letter-spacing: 3px;
+    font-family:Arial, Helvetica, sans-serif
 }
 .mainContainer {
-    background-color: rgb(70, 70, 70);
+    margin-top: 5%;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #515151, #262626);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #515151, #252525); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     width: 25%;
-    height: 32vw;
+    height: 34vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 26px;
+    box-shadow: 4px 4px rgb(71, 71, 71);
 }
 button {
     height: 5vw;
     width: 5vw;
     border-radius: 100%;
-    background-color: rgb(197, 197, 197);
-    border: solid 1px black;
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #505255, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #686d72, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: outset 1px #494949;
     font-weight: 600;
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
     min-width: fit-content;
     min-height: fit-content;
     margin:2px;
+    box-shadow: 2px 2px #6e6e6e;
+    cursor: pointer;
 }
 button:hover{
-    background-color: rgb(167, 167, 167);
+    background-color: rgb(167, 167, 167);    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #47494b, #a6abaf);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #595d62, #a5aaae); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0px 0px #6e6e6e;
+    border: inset 1px #494949;
+  }
 .buttonContainer{
     display: flex;
     margin-top: 1%;
     padding:3%;
     justify-content: center;
-
 }
 .operands{
     width:20%
@@ -39,28 +62,45 @@ button:hover{
 .operandBtn{
     height: 4.5vw;
     width: 4.5vw;
-    background-color: orange;
+    background: #fceabb;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f8b500, #fceabb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f8b500, #fceabb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .operandBtn:hover{
-    background-color: rgb(200, 147, 12);
+    background: -webkit-linear-gradient(to right, #dba102, #fae4ac);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dca202, #e2d1a7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 #clear{
     height: 4vw;
-    background-color: white;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
     width: 5vw;
     min-width: fit-content;
     min-height: fit-content;
     font-size: 1.3vw;
     margin-right: 5%;
 }
+#clear:hover{
+    background-image: linear-gradient(to top, #b3bdc4 0%, #c6cfd3 100%);
+}
 #equals{
-    background-color: #5e5ead;
+    color: white;
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#equals:hover{
+    background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #162333, #131c2f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1b2e43, #152136); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
 .display{
     width: 80%;
     height: 4vw;
     border-radius: 4px;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-inline: 8%;
     font-size: xx-large;
     background-color: rgb(220, 220, 220);
@@ -70,4 +110,8 @@ button:hover{
     flex-wrap: wrap;
     justify-content: center;
     width: 75%;
+}
+.author{
+    color: rgb(231, 234, 249);
+    font-size: 11pt;
 }

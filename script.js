@@ -73,6 +73,7 @@ function equals(){
         second.style.display = "none";
         first.value = results.toFixed(9);
         second.value = "";
+      
     }
 }
 
