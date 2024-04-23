@@ -5,13 +5,15 @@ body{
 }
 .title{
     margin-top: 2%;
-    color: rgb(231, 234, 249);
+    color: #d6d6d7;
     box-shadow: 2px 2px solid;
-    letter-spacing: 3px;
-    font-family:Arial, Helvetica, sans-serif
+    letter-spacing: 6px;
+    font-weight: 600;
+    font-family:'digital-clock-font';
 }
 .mainContainer {
     margin-top: 5%;
+    background-image:url("./plastic.png");
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #515151, #262626);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #515151, #252525); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -21,7 +23,7 @@ body{
     flex-direction: column;
     align-items: center;
     border-radius: 26px;
-    box-shadow: 4px 4px rgb(71, 71, 71);
+    box-shadow: 1px 1px rgb(71, 71, 71);
 }
 button {
     height: 5vw;
@@ -32,12 +34,14 @@ button {
     background: linear-gradient(to right, #686d72, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: outset 1px #494949;
     font-weight: 600;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: large;
+    font-family: "Bakbak One", sans-serif;
+    color: #262626;
+    font-size: 20pt;
+    text-shadow:1px #696969;
     min-width: fit-content;
     min-height: fit-content;
     margin:2px;
-    box-shadow: 2px 2px #6e6e6e;
+    box-shadow: 1px 1px #6e6e6e;
     cursor: pointer;
 }
 button:hover{
@@ -79,6 +83,8 @@ button:active {
     min-height: fit-content;
     font-size: 1.3vw;
     margin-right: 5%;
+    font-weight: 400;
+    text-shadow: none;
 }
 #clear:hover{
     background-image: linear-gradient(to top, #b3bdc4 0%, #c6cfd3 100%);
@@ -91,8 +97,8 @@ button:active {
 }
 #equals:hover{
     background: #141E30;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #162333, #131c2f);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #1b2e43, #152136); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #162333, #131c2f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1b2e43, #152136); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
 }
@@ -103,7 +109,9 @@ background: linear-gradient(to right, #1b2e43, #152136); /* W3C, IE 10+/ Edge, F
     margin-top: 2%;
     margin-inline: 8%;
     font-size: xx-large;
-    background-color: rgb(220, 220, 220);
+    font-family:'digital-clock-font';
+    background-color: rgb(199, 196, 196);
+    letter-spacing: 2px;
 }
 .numbers{
     display: flex;
@@ -114,4 +122,13 @@ background: linear-gradient(to right, #1b2e43, #152136); /* W3C, IE 10+/ Edge, F
 .author{
     color: rgb(231, 234, 249);
     font-size: 11pt;
+    opacity: 69%;
 }
+@font-face{
+    font-family:'digital-clock-font';
+    src: url('./digital-7.ttf');
+}
+
+    
+
+  
