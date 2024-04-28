@@ -2,6 +2,7 @@ let first = document.querySelector("#digit1");
 let second = document.querySelector("#digit2");
 let resultsDisplay = document.querySelector("#results");
 let operandType = "";
+
 function add(){
     second.style.display = "block";
     first.style.display = "none";
@@ -71,7 +72,7 @@ function equals(){
         results = parseFloat(first.value) / parseFloat(second.value);
         first.style.display = "block";
         second.style.display = "none";
-        first.value = results.toFixed(9);
+        first.value = results.toFixed(12);
         second.value = "";
       
     }
@@ -88,3 +89,67 @@ function period(){
         parseFloat(displaying);
     }
 }
+window.addEventListener("keydown", (keypress) =>{
+    if (keypress.key == "+") {
+        add();
+    }
+    if (keypress.key == "-") {
+        subtract();
+    }
+    if (keypress.key == "*") {
+        multiply();
+    }
+    if (keypress.key == "/") {
+        divide();
+    }
+    switch (keypress.key){
+        case "+":
+            add();
+            break;
+        case "-":
+            subtract();
+            break;
+        case "*":
+            multiply();
+            break;
+        case "/":
+            divide();
+            break;
+        case "1":
+            number(1);
+            break;
+        case "2":
+            number(2);
+            break;
+        case "3":
+            number(3);
+            break;
+        case "4":
+            number(4);
+            break;
+        case "5":
+            number(5);
+            break;
+        case "6":
+            number(6);
+            break;
+        case "7":
+            number(7);
+            break;
+        case "8":
+            number(8);
+            break;
+        case "9":
+            number(9);
+            break;
+        case "0":
+            number(0);
+            break;
+    }
+})
+
+window.addEventListener("keyup", (enter) =>{
+    if (enter.key == "Enter"){
+        equals();
+    }
+})
